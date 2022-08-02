@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Profile from "./components/Profile";
+import UseStateExa from "./components/UseStateExa";
+import { UserContextProvider } from "./context/UserContext";
+
+export interface ITodo {
+  id: number;
+  title: string;
+  description: string;
+  status: boolean;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      {/* <Profile age={22} status="single" />
+      <Profile name="mukesh" age={23} status="couple" />
+      <Profile name="ramesh" age={23} status="single" >Salary: 5ctc</Profile> */}
+
+      <UserContextProvider>
+        <UseStateExa />
+      </UserContextProvider>
+    </>
   );
 }
 
