@@ -1,5 +1,5 @@
 // import Profile from "./components/Profile";
-import UseStateExa from "./components/UseStateExa";
+import StatesExa from "./components/states/StatesExa";
 import { UserContextProvider } from "./context/UserContext";
 
 export interface ITodo {
@@ -18,7 +18,7 @@ function App() {
       <Profile name="ramesh" age={23} status="single" >Salary: 5ctc</Profile> */}
 
       <UserContextProvider>
-        <UseStateExa />
+        <StatesExa />
       </UserContextProvider>
     </>
   );
